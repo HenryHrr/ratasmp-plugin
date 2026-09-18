@@ -1,0 +1,4 @@
+# Probabilidad de que aparezca un queso, de 100. 1 = 1% (la real).
+# Para pruebas, cambia esto a 100, guarda, y reinicia el servidor
+# (o usa /reload si tu servidor lo permite).
+probabilidad: 1

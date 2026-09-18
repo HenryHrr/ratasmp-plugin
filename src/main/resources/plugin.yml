@@ -1,0 +1,5 @@
+name: RataQuesos
+version: '1.0'
+main: com.ratasmp.quesos.RataQuesos
+author: RataSMP
+description: Da una probabilidad de encontrar un "Queso" en los cofres del mundo.
