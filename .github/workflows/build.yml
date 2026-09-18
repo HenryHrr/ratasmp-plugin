@@ -1,0 +1,29 @@
+yaml
+name: Compilar plugin RataQuesos
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el codigo
+        uses: actions/checkout@v4
+
+      - name: Instalar Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Compilar con Maven
+        run: mvn -B package
+
+      - name: Guardar el .jar compilado
+        uses: actions/upload-artifact@v4
+        with:
+          name: RataQuesos
+          path: target/RataQuesos.jar
